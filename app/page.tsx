@@ -78,7 +78,7 @@ export default function HackTheGapLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative pt-32 pb-20 overflow-hidden bg-[#F0F0F0]">
+      <section id="home" className="relative pt-32 pb-32 min-h-screen flex items-center overflow-hidden bg-[#F0F0F0]">
         {/* Large Decorative Background Shapes */}
         <div className="absolute top-20 right-[5%] w-40 h-40 bg-[#FFD93D] border-4 border-black rotate-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
         <div className="absolute top-40 left-[8%] w-48 h-48 bg-[#FF6B9D] border-4 border-black -rotate-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
@@ -109,7 +109,7 @@ export default function HackTheGapLanding() {
             <div className="mb-12 inline-block">
               <div className="bg-[#FFD93D] border-4 border-black px-8 py-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-flex items-center gap-4 font-black text-lg">
                 <Calendar className="w-6 h-6" strokeWidth={3} />
-                October 23-24, 2025
+                November 15-16, 2025
                 <span className="w-2 h-2 bg-black"></span>
                 <MapPin className="w-6 h-6" strokeWidth={3} />
                 42 Paris
@@ -118,20 +118,10 @@ export default function HackTheGapLanding() {
             
             {/* Main Headline with COLORED TEXT */}
             <div className="mb-16 relative">
-              <h1 className="text-7xl md:text-9xl font-black mb-8 leading-[0.9] tracking-tighter">
+              <h1 className="text-[8rem] sm:text-[10rem] md:text-[12rem] lg:text-[16rem] font-black mb-8 leading-none tracking-tighter">
                 <span className="block">
-                  <span className="bg-[#FF6B9D] border-4 border-black px-4 py-2 inline-block shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] -rotate-1">
-                    STOP BUILDING
-                  </span>
-                </span>
-                <span className="block my-4">
-                  <span className="bg-[#00D9C0] border-4 border-black px-4 py-2 inline-block shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] rotate-1">
-                    TOOLS LOOKING
-                  </span>
-                </span>
-                <span className="block">
-                  <span className="bg-[#FFD93D] border-4 border-black px-4 py-2 inline-block shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] -rotate-1">
-                    FOR PROBLEMS
+                  <span className="bg-gradient-to-r from-[#00D9C0] via-[#FFD93D] to-[#FF6B9D] border-4 border-black px-8 py-4 inline-block shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-1 whitespace-nowrap">
+                    HACK THE GAP!
                   </span>
                 </span>
               </h1>
@@ -143,7 +133,7 @@ export default function HackTheGapLanding() {
               <div className="absolute -left-16 bottom-4 w-12 h-12 bg-[#6BCF7F] border-4 border-black -rotate-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hidden md:block -z-10"></div>
               
               <p className="text-3xl md:text-4xl font-bold leading-tight mb-6 relative z-10">
-                Start imagining <span className="bg-[#00D9C0] border-4 border-black px-4 py-2 inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] -rotate-1">problems worth solving</span>
+                Start building <span className="bg-[#00D9C0] border-4 border-black px-4 py-2 inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] -rotate-1">impactful products</span>
               </p>
               <p className="text-2xl md:text-3xl font-bold leading-tight relative z-10">
                 Where <span className="bg-[#FFD93D] border-4 border-black px-4 py-2 inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-1">expert challenges</span> meet <span className="bg-[#FF6B9D] border-4 border-black px-4 py-2 inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] -rotate-1">product craft</span>
@@ -166,7 +156,7 @@ export default function HackTheGapLanding() {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { number: '60-90', label: 'PRODUCT BUILDERS', bgColor: '#00D9C0' },
+                { number: '100+', label: 'PRODUCT BUILDERS', bgColor: '#00D9C0' },
                 { number: '10-15', label: 'EXPERT MENTORS', bgColor: '#FFD93D' },
                 { number: '48HRS', label: 'INTENSE BUILDING', bgColor: '#FF6B9D' },
                 { number: '10+', label: 'VIABLE PRODUCTS', bgColor: '#C996FF' }
