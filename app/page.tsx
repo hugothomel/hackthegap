@@ -78,7 +78,7 @@ export default function HackTheGapLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative pt-20 pb-12 h-screen flex items-center overflow-hidden bg-[#F0F0F0]">
+      <section id="home" className="relative pt-20 pb-12 min-h-screen flex items-center overflow-hidden bg-[#F0F0F0]">
         {/* Large Decorative Background Shapes */}
         <div className="absolute top-20 right-[5%] w-28 h-28 bg-[#FFD93D] border-4 border-black rotate-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
         <div className="absolute top-32 left-[8%] w-32 h-32 bg-[#FF6B9D] border-4 border-black -rotate-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
@@ -103,58 +103,60 @@ export default function HackTheGapLanding() {
           </div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 flex justify-center">
-          <div className="inline-block">
+        <div className="container mx-auto px-3 sm:px-6 relative z-10 w-full">
+          <div className="max-w-6xl mx-auto">
             {/* Date Badge */}
-            <div className="mb-6">
-              <div className="bg-[#FFD93D] border-4 border-black px-6 py-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] inline-flex items-center gap-3 font-black text-sm">
-                <Calendar className="w-5 h-5" strokeWidth={3} />
-                November 15-16, 2025
-                <span className="w-1.5 h-1.5 bg-black"></span>
-                <MapPin className="w-5 h-5" strokeWidth={3} />
-                42 Paris
+            <div className="mb-3 sm:mb-6">
+              <div className="bg-[#FFD93D] border-3 sm:border-4 border-black px-2 sm:px-6 py-1.5 sm:py-2 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] inline-flex items-center gap-1.5 sm:gap-3 font-black text-[0.65rem] sm:text-sm flex-wrap">
+                <Calendar className="w-3.5 h-3.5 sm:w-5 sm:h-5" strokeWidth={3} />
+                <span className="hidden sm:inline">November 15-16, 2025</span>
+                <span className="sm:hidden">Nov 15-16</span>
+                <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-black"></span>
+                <MapPin className="w-3.5 h-3.5 sm:w-5 sm:h-5" strokeWidth={3} />
+                <span className="sm:hidden">42 Paris</span>
+                <span className="hidden sm:inline">42 Paris</span>
               </div>
             </div>
             
             {/* Main Headline with COLORED TEXT */}
-            <div className="mb-8 relative">
-              <h1 className="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[7.5rem] font-black mb-4 leading-none tracking-tighter">
+            <div className="mb-3 sm:mb-8 relative overflow-hidden">
+              <h1 className="text-[2rem] xs:text-[2.5rem] sm:text-[4rem] md:text-[6rem] lg:text-[7.5rem] font-black mb-2 sm:mb-4 leading-[0.9] tracking-tighter">
                 <span className="block">
-                  <span className="bg-gradient-to-r from-[#00D9C0] via-[#FFD93D] to-[#FF6B9D] border-4 border-black px-6 py-3 inline-block shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-1 whitespace-nowrap">
+                  <span className="bg-gradient-to-r from-[#00D9C0] via-[#FFD93D] to-[#FF6B9D] border-3 sm:border-4 border-black px-2 py-1.5 sm:px-6 sm:py-3 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-1 max-w-full break-words">
                     HACK THE GAP!
                   </span>
                 </span>
               </h1>
             </div>
             
-            <div className="mb-8 relative">
+            <div className="mb-4 sm:mb-8 relative">
               {/* Decorative squares */}
-              <div className="absolute -right-8 top-4 w-12 h-12 bg-[#C996FF] border-4 border-black rotate-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hidden md:block -z-10"></div>
-              <div className="absolute -left-16 bottom-4 w-8 h-8 bg-[#6BCF7F] border-4 border-black -rotate-12 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hidden md:block -z-10"></div>
+              <div className="absolute -right-8 top-4 w-12 h-12 bg-[#C996FF] border-4 border-black rotate-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hidden lg:block -z-10"></div>
+              <div className="absolute -left-16 bottom-4 w-8 h-8 bg-[#6BCF7F] border-4 border-black -rotate-12 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hidden lg:block -z-10"></div>
               
-              <p className="text-xl md:text-2xl font-bold leading-tight mb-4 relative z-10">
-                Start building <span className="bg-[#00D9C0] border-4 border-black px-3 py-1 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">impactful products</span>
+              <p className="text-sm sm:text-xl md:text-2xl font-bold leading-tight mb-2 sm:mb-4 relative z-10">
+                Start building <span className="bg-[#00D9C0] border-3 sm:border-4 border-black px-1.5 py-0.5 sm:px-3 sm:py-1 inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">impactful products</span>
               </p>
-              <p className="text-lg md:text-xl font-bold leading-tight relative z-10">
-                Where <span className="bg-[#FFD93D] border-4 border-black px-3 py-1 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1">expert challenges</span> meet <span className="bg-[#FF6B9D] border-4 border-black px-3 py-1 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">product craft</span>
+              <p className="text-xs sm:text-lg md:text-xl font-bold leading-tight relative z-10">
+                Where <span className="bg-[#FFD93D] border-3 sm:border-4 border-black px-1.5 py-0.5 sm:px-3 sm:py-1 inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1">expert challenges</span> meet <span className="bg-[#FF6B9D] border-3 sm:border-4 border-black px-1.5 py-0.5 sm:px-3 sm:py-1 inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">product craft</span>
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <button className="group bg-[#00D9C0] border-4 border-black px-8 py-4 font-black text-base uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] active:shadow-none active:translate-x-[6px] active:translate-y-[6px] transition-all flex items-center justify-center gap-2">
-                <Rocket strokeWidth={3} size={20} />
-                Apply as Builder
-                <ArrowRight strokeWidth={3} size={20} className="group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 mb-4 sm:mb-10">
+              <button className="group bg-[#00D9C0] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
+                <Rocket strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
+                <span className="whitespace-nowrap">Apply as Builder</span>
+                <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="bg-[#FFD93D] border-4 border-black px-8 py-4 font-black text-base uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] active:shadow-none active:translate-x-[6px] active:translate-y-[6px] transition-all flex items-center justify-center gap-2">
-                <Target strokeWidth={3} size={20} />
-                Propose Challenge
+              <button className="bg-[#FFD93D] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
+                <Target strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
+                <span className="whitespace-nowrap">Propose Challenge</span>
               </button>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
               {[
                 { number: '100+', label: 'PRODUCT BUILDERS', bgColor: '#00D9C0' },
                 { number: '10-15', label: 'EXPERT MENTORS', bgColor: '#FFD93D' },
@@ -163,13 +165,13 @@ export default function HackTheGapLanding() {
               ].map((stat, i) => (
                 <div 
                   key={i} 
-                  className="border-4 border-black p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
+                  className="border-3 sm:border-4 border-black p-2 sm:p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all"
                   style={{ backgroundColor: stat.bgColor }}
                 >
-                  <div className="text-4xl font-black mb-1">
+                  <div className="text-2xl sm:text-4xl font-black mb-0.5 sm:mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-[0.6rem] font-black uppercase tracking-wide">{stat.label}</div>
+                  <div className="text-[0.5rem] sm:text-[0.6rem] font-black uppercase tracking-wide leading-tight">{stat.label}</div>
                 </div>
               ))}
             </div>
