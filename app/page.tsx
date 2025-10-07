@@ -78,83 +78,83 @@ export default function HackTheGapLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative pt-32 pb-32 min-h-screen flex items-center overflow-hidden bg-[#F0F0F0]">
+      <section id="home" className="relative pt-20 pb-12 h-screen flex items-center overflow-hidden bg-[#F0F0F0]">
         {/* Large Decorative Background Shapes */}
-        <div className="absolute top-20 right-[5%] w-40 h-40 bg-[#FFD93D] border-4 border-black rotate-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
-        <div className="absolute top-40 left-[8%] w-48 h-48 bg-[#FF6B9D] border-4 border-black -rotate-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
-        <div className="absolute bottom-32 right-[15%] w-36 h-36 bg-[#C996FF] border-4 border-black rotate-45 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
-        <div className="absolute top-[30%] right-[20%] w-24 h-24 bg-[#6BCF7F] border-4 border-black -rotate-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hidden xl:block"></div>
-        <div className="absolute bottom-20 left-[10%] w-32 h-32 bg-[#00D9C0] border-4 border-black rotate-12 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
+        <div className="absolute top-20 right-[5%] w-28 h-28 bg-[#FFD93D] border-4 border-black rotate-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
+        <div className="absolute top-32 left-[8%] w-32 h-32 bg-[#FF6B9D] border-4 border-black -rotate-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
+        <div className="absolute bottom-20 right-[15%] w-24 h-24 bg-[#C996FF] border-4 border-black rotate-45 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
+        <div className="absolute top-[30%] right-[20%] w-16 h-16 bg-[#6BCF7F] border-4 border-black -rotate-12 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hidden xl:block"></div>
+        <div className="absolute bottom-16 left-[10%] w-20 h-20 bg-[#00D9C0] border-4 border-black rotate-12 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
         
         {/* Floating Icons */}
-        <div className="absolute top-24 left-[12%] hidden xl:block">
-          <div className="w-24 h-24 bg-[#FFD93D] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center rotate-6">
-            <Laptop strokeWidth={3} size={40} />
+        <div className="absolute top-20 left-[12%] hidden xl:block">
+          <div className="w-16 h-16 bg-[#FFD93D] border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center rotate-6">
+            <Laptop strokeWidth={3} size={28} />
           </div>
         </div>
         <div className="absolute top-[45%] left-[5%] hidden xl:block">
-          <div className="w-24 h-24 bg-[#FF6B9D] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center -rotate-12">
-            <Brain strokeWidth={3} size={40} />
+          <div className="w-16 h-16 bg-[#FF6B9D] border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center -rotate-12">
+            <Brain strokeWidth={3} size={28} />
           </div>
         </div>
-        <div className="absolute bottom-40 right-[8%] hidden xl:block">
-          <div className="w-24 h-24 bg-[#00D9C0] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center rotate-12">
-            <Lightbulb strokeWidth={3} size={40} />
+        <div className="absolute bottom-28 right-[8%] hidden xl:block">
+          <div className="w-16 h-16 bg-[#00D9C0] border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center rotate-12">
+            <Lightbulb strokeWidth={3} size={28} />
           </div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-6xl mx-auto">
+        <div className="container mx-auto px-6 relative z-10 flex justify-center">
+          <div className="inline-block">
             {/* Date Badge */}
-            <div className="mb-12 inline-block">
-              <div className="bg-[#FFD93D] border-4 border-black px-8 py-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-flex items-center gap-4 font-black text-lg">
-                <Calendar className="w-6 h-6" strokeWidth={3} />
+            <div className="mb-6">
+              <div className="bg-[#FFD93D] border-4 border-black px-6 py-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] inline-flex items-center gap-3 font-black text-sm">
+                <Calendar className="w-5 h-5" strokeWidth={3} />
                 November 15-16, 2025
-                <span className="w-2 h-2 bg-black"></span>
-                <MapPin className="w-6 h-6" strokeWidth={3} />
+                <span className="w-1.5 h-1.5 bg-black"></span>
+                <MapPin className="w-5 h-5" strokeWidth={3} />
                 42 Paris
               </div>
             </div>
             
             {/* Main Headline with COLORED TEXT */}
-            <div className="mb-16 relative">
-              <h1 className="text-[8rem] sm:text-[10rem] md:text-[12rem] lg:text-[16rem] font-black mb-8 leading-none tracking-tighter">
+            <div className="mb-8 relative">
+              <h1 className="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[7.5rem] font-black mb-4 leading-none tracking-tighter">
                 <span className="block">
-                  <span className="bg-gradient-to-r from-[#00D9C0] via-[#FFD93D] to-[#FF6B9D] border-4 border-black px-8 py-4 inline-block shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-1 whitespace-nowrap">
+                  <span className="bg-gradient-to-r from-[#00D9C0] via-[#FFD93D] to-[#FF6B9D] border-4 border-black px-6 py-3 inline-block shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-1 whitespace-nowrap">
                     HACK THE GAP!
                   </span>
                 </span>
               </h1>
             </div>
             
-            <div className="mb-16 max-w-4xl relative">
+            <div className="mb-8 relative">
               {/* Decorative squares */}
-              <div className="absolute -right-8 top-4 w-16 h-16 bg-[#C996FF] border-4 border-black rotate-12 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hidden md:block -z-10"></div>
-              <div className="absolute -left-16 bottom-4 w-12 h-12 bg-[#6BCF7F] border-4 border-black -rotate-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hidden md:block -z-10"></div>
+              <div className="absolute -right-8 top-4 w-12 h-12 bg-[#C996FF] border-4 border-black rotate-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hidden md:block -z-10"></div>
+              <div className="absolute -left-16 bottom-4 w-8 h-8 bg-[#6BCF7F] border-4 border-black -rotate-12 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hidden md:block -z-10"></div>
               
-              <p className="text-3xl md:text-4xl font-bold leading-tight mb-6 relative z-10">
-                Start building <span className="bg-[#00D9C0] border-4 border-black px-4 py-2 inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] -rotate-1">impactful products</span>
+              <p className="text-xl md:text-2xl font-bold leading-tight mb-4 relative z-10">
+                Start building <span className="bg-[#00D9C0] border-4 border-black px-3 py-1 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">impactful products</span>
               </p>
-              <p className="text-2xl md:text-3xl font-bold leading-tight relative z-10">
-                Where <span className="bg-[#FFD93D] border-4 border-black px-4 py-2 inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-1">expert challenges</span> meet <span className="bg-[#FF6B9D] border-4 border-black px-4 py-2 inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] -rotate-1">product craft</span>
+              <p className="text-lg md:text-xl font-bold leading-tight relative z-10">
+                Where <span className="bg-[#FFD93D] border-4 border-black px-3 py-1 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1">expert challenges</span> meet <span className="bg-[#FF6B9D] border-4 border-black px-3 py-1 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">product craft</span>
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-6 mb-20">
-              <button className="group bg-[#00D9C0] border-4 border-black px-10 py-6 font-black text-xl uppercase shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] active:shadow-none active:translate-x-[8px] active:translate-y-[8px] transition-all flex items-center justify-center gap-3">
-                <Rocket strokeWidth={3} size={24} />
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <button className="group bg-[#00D9C0] border-4 border-black px-8 py-4 font-black text-base uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] active:shadow-none active:translate-x-[6px] active:translate-y-[6px] transition-all flex items-center justify-center gap-2">
+                <Rocket strokeWidth={3} size={20} />
                 Apply as Builder
-                <ArrowRight strokeWidth={3} size={24} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight strokeWidth={3} size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="bg-[#FFD93D] border-4 border-black px-10 py-6 font-black text-xl uppercase shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] active:shadow-none active:translate-x-[8px] active:translate-y-[8px] transition-all flex items-center justify-center gap-3">
-                <Target strokeWidth={3} size={24} />
+              <button className="bg-[#FFD93D] border-4 border-black px-8 py-4 font-black text-base uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] active:shadow-none active:translate-x-[6px] active:translate-y-[6px] transition-all flex items-center justify-center gap-2">
+                <Target strokeWidth={3} size={20} />
                 Propose Challenge
               </button>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { number: '100+', label: 'PRODUCT BUILDERS', bgColor: '#00D9C0' },
                 { number: '10-15', label: 'EXPERT MENTORS', bgColor: '#FFD93D' },
@@ -163,13 +163,13 @@ export default function HackTheGapLanding() {
               ].map((stat, i) => (
                 <div 
                   key={i} 
-                  className="border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
+                  className="border-4 border-black p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
                   style={{ backgroundColor: stat.bgColor }}
                 >
-                  <div className="text-6xl font-black mb-2">
+                  <div className="text-4xl font-black mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-xs font-black uppercase tracking-wide">{stat.label}</div>
+                  <div className="text-[0.6rem] font-black uppercase tracking-wide">{stat.label}</div>
                 </div>
               ))}
             </div>
