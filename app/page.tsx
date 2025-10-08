@@ -3,9 +3,22 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Lightbulb, Target, Award, Calendar, MapPin, ArrowRight, Code, Heart, Rocket, Zap, Menu, X, Sparkles, Building2, Brain, Briefcase, GraduationCap, Github, Twitter, Linkedin, Mail, Star, TreePine, Laptop, ChevronDown } from 'lucide-react';
 
+type ModalType = 'builder' | 'challenge' | 'sponsor' | 'academic' | 'contact' | null;
+
 export default function HackTheGapLanding() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState<ModalType>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    organization: '',
+    message: '',
+    experience: '',
+    portfolio: '',
+    challengeTitle: '',
+    challengeDescription: ''
+  });
 
   useEffect(() => {
     const handleScroll = () => {
