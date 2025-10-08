@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Users, Lightbulb, Target, Award, Calendar, MapPin, ArrowRight, Code, Heart, Rocket, Zap, Menu, X, Sparkles, Building2, Brain, Briefcase, GraduationCap, Github, Twitter, Linkedin, Mail, Star, TreePine, Laptop, ChevronDown } from 'lucide-react';
+import { Users, Lightbulb, Target, Award, Calendar, MapPin, ArrowRight, Code, Heart, Rocket, Zap, Menu, X, Sparkles, Building2, Brain, Briefcase, GraduationCap, Linkedin, Mail, Star, TreePine, Laptop, ChevronDown } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
 const ChallengeWizard = dynamic(() => import('./components/ChallengeWizard'), { ssr: false });
@@ -669,7 +669,8 @@ export default function HackTheGapLanding() {
       {/* Footer */}
       <footer className="border-t-2 sm:border-t-4 border-black py-8 sm:py-12 md:py-16 bg-white">
         <div className="container mx-auto px-3 sm:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 mb-8 sm:mb-12">
+          {/* Top Section: Logo + Social Icons */}
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-8 mb-8 sm:mb-12">
             <div className="flex items-center gap-2 sm:gap-3">
               <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#00D9C0] border-2 sm:border-4 border-black flex items-center justify-center font-black text-2xl sm:text-3xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 H
@@ -678,27 +679,55 @@ export default function HackTheGapLanding() {
                 Hack the Gap
               </span>
             </div>
+
+            {/* Social Links */}
             <div className="flex gap-3 sm:gap-4">
-              {[
-                { icon: Twitter, label: 'Twitter' },
-                { icon: Linkedin, label: 'LinkedIn' },
-                { icon: Github, label: 'GitHub' },
-                { icon: Mail, label: 'Email' }
-              ].map(({ icon: Icon, label }) => (
-                <a 
-                  key={label}
-                  href="#" 
-                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white border-2 sm:border-4 border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] transition-all"
-                  aria-label={label}
-                >
-                  <Icon strokeWidth={3} size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                </a>
-              ))}
+              <a 
+                href="https://www.linkedin.com/company/hackthegap-event"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white border-2 sm:border-4 border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] transition-all"
+                aria-label="LinkedIn"
+              >
+                <Linkedin strokeWidth={3} size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              </a>
+              <a 
+                href="mailto:contact@hackthegap.xyz"
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white border-2 sm:border-4 border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] transition-all"
+                aria-label="Email"
+              >
+                <Mail strokeWidth={3} size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              </a>
             </div>
           </div>
-          <div className="text-center border-t-2 sm:border-t-4 border-black pt-6 sm:pt-8">
-            <p className="font-black text-base sm:text-lg mb-1 sm:mb-2">© 2025 Hack the Gap</p>
-            <p className="font-bold text-sm sm:text-base">Building products that matter</p>
+
+          {/* Bottom Section: Contact Info + Copyright */}
+          <div className="border-t-2 sm:border-t-4 border-black pt-6 sm:pt-8">
+            <div className="flex flex-row justify-between items-start gap-3 sm:gap-6">
+              {/* Contact Information - Left */}
+              <div className="flex flex-col gap-1 sm:gap-2 font-black text-[0.65rem] sm:text-sm md:text-base min-w-0 flex-1">
+                <div className="flex items-start gap-1 sm:gap-2">
+                  <span className="text-sm sm:text-lg flex-shrink-0">📞</span>
+                  <span className="break-words">+33 6 88 14 76 86</span>
+                </div>
+                <div className="flex items-start gap-1 sm:gap-2">
+                  <span className="text-sm sm:text-lg flex-shrink-0">✉️</span>
+                  <a href="mailto:contact@hackthegap.xyz" className="hover:text-[#00D9C0] transition-colors break-words">
+                    contact@hackthegap.xyz
+                  </a>
+                </div>
+                <div className="flex items-start gap-1 sm:gap-2">
+                  <span className="text-sm sm:text-lg flex-shrink-0">📍</span>
+                  <span className="leading-tight break-words">STATION F, 5 Parvis Alan Turing, 75013 Paris</span>
+                </div>
+              </div>
+              
+              {/* Copyright - Right */}
+              <div className="text-right flex-shrink-0">
+                <p className="font-black text-xs sm:text-base md:text-lg mb-0.5 sm:mb-1 md:mb-2 whitespace-nowrap">© 2025 Hack the Gap</p>
+                <p className="font-black text-[0.5rem] sm:text-sm md:text-base leading-tight">Building products that matter</p>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
