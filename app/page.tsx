@@ -135,7 +135,7 @@ export default function HackTheGapLanding() {
               <button onClick={() => scrollToSection('principles')} className="font-bold hover:text-[#00D9C0] transition-colors">Principles</button>
               <button onClick={() => scrollToSection('audiences')} className="font-bold hover:text-[#00D9C0] transition-colors">Join</button>
               <button onClick={() => scrollToSection('details')} className="font-bold hover:text-[#00D9C0] transition-colors">Details</button>
-              <button className="bg-[#00D9C0] border-4 border-black px-6 py-2 font-black uppercase text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
+              <button onClick={() => openModal('builder')} className="bg-[#00D9C0] border-4 border-black px-6 py-2 font-black uppercase text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
                 Apply Now
               </button>
             </div>
@@ -157,7 +157,7 @@ export default function HackTheGapLanding() {
                 <button onClick={() => scrollToSection('principles')} className="text-left font-bold text-lg">Principles</button>
                 <button onClick={() => scrollToSection('audiences')} className="text-left font-bold text-lg">Join</button>
                 <button onClick={() => scrollToSection('details')} className="text-left font-bold text-lg">Details</button>
-                <button className="bg-[#00D9C0] border-4 border-black px-6 py-3 font-black uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <button onClick={() => openModal('builder')} className="bg-[#00D9C0] border-4 border-black px-6 py-3 font-black uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   Apply Now
                 </button>
               </div>
@@ -233,12 +233,12 @@ export default function HackTheGapLanding() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 mb-4 sm:mb-6">
-              <button className="group bg-[#00D9C0] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
+              <button onClick={() => openModal('builder')} className="group bg-[#00D9C0] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
                 <Rocket strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
                 <span className="whitespace-nowrap">Apply as Builder</span>
                 <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="bg-[#FFD93D] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
+              <button onClick={() => openModal('challenge')} className="bg-[#FFD93D] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
                 <Target strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
                 <span className="whitespace-nowrap">Propose Challenge</span>
               </button>
@@ -446,7 +446,7 @@ export default function HackTheGapLanding() {
                   <span>Build solutions people actually use</span>
                 </li>
               </ul>
-              <button className="w-full bg-black text-[#00D9C0] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
+              <button onClick={() => openModal('builder')} className="w-full bg-black text-[#00D9C0] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
                 Apply as Builder
                 <ArrowRight strokeWidth={3} size={20} />
               </button>
@@ -475,7 +475,7 @@ export default function HackTheGapLanding() {
                   <span>No development costs</span>
                 </li>
               </ul>
-              <button className="w-full bg-black text-[#FFD93D] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
+              <button onClick={() => openModal('challenge')} className="w-full bg-black text-[#FFD93D] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
                 Submit Challenge
                 <ArrowRight strokeWidth={3} size={20} />
               </button>
@@ -504,7 +504,7 @@ export default function HackTheGapLanding() {
                   <span>Support real-world solutions</span>
                 </li>
               </ul>
-              <button className="w-full bg-black text-[#FF6B9D] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
+              <button onClick={() => openModal('sponsor')} className="w-full bg-black text-[#FF6B9D] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
                 Become Sponsor
                 <ArrowRight strokeWidth={3} size={20} />
               </button>
@@ -533,7 +533,7 @@ export default function HackTheGapLanding() {
                   <span>Visibility on concrete innovation</span>
                 </li>
               </ul>
-              <button className="w-full bg-black text-[#C996FF] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
+              <button onClick={() => openModal('academic')} className="w-full bg-black text-[#C996FF] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
                 Partner With Us
                 <ArrowRight strokeWidth={3} size={20} />
               </button>
@@ -662,11 +662,11 @@ export default function HackTheGapLanding() {
                 Join us for a weekend where expertise meets execution, and real problems find thoughtful solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button className="bg-black text-[#00D9C0] border-4 border-black px-12 py-6 font-black text-xl uppercase shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center gap-3">
+                <button onClick={() => openModal('builder')} className="bg-black text-[#00D9C0] border-4 border-black px-12 py-6 font-black text-xl uppercase shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center gap-3">
                   <Rocket strokeWidth={3} size={24} />
                   Apply Now
                 </button>
-                <button className="bg-white border-4 border-black px-12 py-6 font-black text-xl uppercase shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center gap-3">
+                <button onClick={() => openModal('contact')} className="bg-white border-4 border-black px-12 py-6 font-black text-xl uppercase shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center gap-3">
                   <Mail strokeWidth={3} size={24} />
                   Learn More
                 </button>
