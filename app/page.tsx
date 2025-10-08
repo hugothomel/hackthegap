@@ -2,6 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Users, Lightbulb, Target, Award, Calendar, MapPin, ArrowRight, Code, Heart, Rocket, Zap, Menu, X, Sparkles, Building2, Brain, Briefcase, GraduationCap, Github, Twitter, Linkedin, Mail, Star, TreePine, Laptop, ChevronDown } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+const ChallengeWizard = dynamic(() => import('./components/ChallengeWizard'), { ssr: false });
 
 type ModalType = 'builder' | 'challenge' | 'sponsor' | 'academic' | 'contact' | null;
 
@@ -713,8 +716,13 @@ export default function HackTheGapLanding() {
         </div>
       </footer>
 
-      {/* Modal */}
-      {modalOpen && (
+      {/* Challenge Wizard */}
+      {modalOpen === 'challenge' && (
+        <ChallengeWizard onClose={closeModal} />
+      )}
+
+      {/* Modal for other types */}
+      {modalOpen && modalOpen !== 'challenge' && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-50" onClick={closeModal}>
           <div 
             className="bg-white border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] max-w-2xl w-full max-h-[90vh] overflow-y-auto"
