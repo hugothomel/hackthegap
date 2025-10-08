@@ -28,6 +28,82 @@ export default function HackTheGapLanding() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const openModal = (type: ModalType) => {
+    setModalOpen(type);
+    setMobileMenuOpen(false);
+  };
+
+  const closeModal = () => {
+    setModalOpen(null);
+    setFormData({
+      name: '',
+      email: '',
+      organization: '',
+      message: '',
+      experience: '',
+      portfolio: '',
+      challengeTitle: '',
+      challengeDescription: ''
+    });
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Get the modal type for the email subject
+    const subjectMap = {
+      builder: 'Product Builder Application',
+      challenge: 'Challenge Submission',
+      sponsor: 'Sponsorship Inquiry',
+      academic: 'Academic Partnership',
+      contact: 'General Inquiry'
+    };
+    
+    const subject = subjectMap[modalOpen as keyof typeof subjectMap] || 'Hack the Gap Inquiry';
+    
+    // Create email body
+    let body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A`;
+    
+    if (formData.organization) {
+      body += `Organization: ${formData.organization}%0D%0A`;
+    }
+    
+    if (formData.experience) {
+      body += `Experience: ${formData.experience}%0D%0A`;
+    }
+    
+    if (formData.portfolio) {
+      body += `Portfolio/Links: ${formData.portfolio}%0D%0A`;
+    }
+    
+    if (formData.challengeTitle) {
+      body += `Challenge Title: ${formData.challengeTitle}%0D%0A`;
+    }
+    
+    if (formData.challengeDescription) {
+      body += `Challenge Description: ${formData.challengeDescription}%0D%0A`;
+    }
+    
+    if (formData.message) {
+      body += `%0D%0AMessage:%0D%0A${formData.message}`;
+    }
+    
+    // Open mailto link
+    window.location.href = `mailto:contact@hackthegap.xyz?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    // Close modal after submission
+    setTimeout(() => {
+      closeModal();
+    }, 500);
+  };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
