@@ -195,6 +195,7 @@ export default function ChallengeWizard({ onClose }: ChallengeWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<ChallengeFormData>(initialFormData);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const steps = [
     { id: 0, title: 'Executive Overview', description: 'High-level problem statement' },
@@ -274,71 +275,37 @@ export default function ChallengeWizard({ onClose }: ChallengeWizardProps) {
     updateFormData({ [field]: newArray } as any);
   };
 
-  const handleSubmit = () => {
-    // Create email body with all data
-    const body = `
-PROBLEM STATEMENT SUBMISSION
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    try {
+      // Submit to API endpoint
+      const response = await fetch('/api/submit-challenge', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-=== 1. EXECUTIVE OVERVIEW ===
-Title: ${formData.challengeTitle}
-Summary: ${formData.executiveSummary}
-Population Affected: ${formData.populationAffected}
-Economic/Social Cost: ${formData.economicSocialCost}
-Opportunity: ${formData.opportunityIfSolved}
-Strategic Importance: ${formData.strategicImportance}
+      const result = await response.json();
 
-=== 2. CONTEXTUAL BACKGROUND ===
-Problem Genesis: ${formData.problemGenesis}
-Theoretical Framework: ${formData.theoreticalFramework}
-
-Previous Attempts:
-${formData.previousAttempts.map((a, i) => `${i + 1}. ${a.initiative} (${a.period}): ${a.outcome}`).join('\n')}
-
-Stakeholders:
-${formData.stakeholders.map((s, i) => `${i + 1}. ${s.name} - ${s.role}`).join('\n')}
-
-=== 3. PROBLEM DEEP DIVE ===
-Case Studies:
-${formData.caseStudies.map((c, i) => `${i + 1}. Context: ${c.context}\n   Impact: ${c.impact}`).join('\n\n')}
-
-Data Repository: ${formData.dataRepositoryLink}
-Regulatory Framework: ${formData.regulatoryFramework}
-Resource Limitations: ${formData.resourceLimitations}
-
-=== 4. SOLUTION PATHWAYS ===
-${formData.pathways.map((p, i) => `
-Pathway ${i + 1}: ${p.name}
-Hypothesis: ${p.hypothesis}
-Mechanism: ${p.mechanism}
-Beneficiaries: ${p.beneficiaries}
-`).join('\n')}
-
-=== 5. VALIDATION FRAMEWORK ===
-Immediate Metrics: ${formData.immediateMetrics.map(m => m.metric).join(', ')}
-Adoption Barriers: ${formData.adoptionBarriers}
-
-=== 6. RESOURCES & COMMITMENT ===
-Lead Expert: ${formData.leadExpertName} (${formData.leadExpertEmail})
-Friday Availability: ${formData.fridayAvailability}
-Post-Event Commitment: ${formData.postEventCommitment.join(', ')}
-
-=== 7. STRATEGIC CONTEXT ===
-Why Now: ${formData.whyNow}
-Global Alignment: ${formData.globalAlignment}
-Message to Innovators: ${formData.messageToInnovators}
-
-=== ADMINISTRATIVE ===
-Primary Contact: ${formData.primaryContact}
-Institution: ${formData.institution}
-Email: ${formData.email}
-    `.trim();
-
-    window.location.href = `mailto:contact@hackthegap.xyz?subject=Challenge Submission: ${encodeURIComponent(formData.challengeTitle)}&body=${encodeURIComponent(body)}`;
-    
-    clearDraft();
-    setTimeout(() => {
-      onClose();
-    }, 500);
+      if (result.success) {
+        // Success! Clear draft and close
+        clearDraft();
+        alert('✅ Challenge submitted successfully! We\'ll review your submission and get back to you within 3 business days.');
+        onClose();
+      } else {
+        // Error from server
+        alert('❌ There was an error submitting your challenge. Please try again or contact us at contact@hackthegap.xyz');
+        console.error('Submission error:', result.error);
+      }
+    } catch (error) {
+      // Network or other error
+      console.error('Failed to submit challenge:', error);
+      alert('❌ Failed to submit. Please check your internet connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const nextStep = () => {
@@ -453,9 +420,10 @@ Email: ${formData.email}
             ) : (
               <button
                 onClick={handleSubmit}
-                className="flex items-center gap-2 bg-[#00D9C0] px-8 py-3 border-4 border-black font-black uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                disabled={isSubmitting}
+                className={`flex items-center gap-2 bg-[#00D9C0] px-8 py-3 border-4 border-black font-black uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                Submit Challenge
+                {isSubmitting ? 'Submitting...' : 'Submit Challenge'}
               </button>
             )}
           </div>
