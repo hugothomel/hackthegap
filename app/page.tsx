@@ -272,51 +272,51 @@ export default function HackTheGapLanding() {
       </section>
 
       {/* The Thesis Section */}
-      <section id="about" className="py-32 bg-white border-y-4 border-black">
-        <div className="container mx-auto px-6">
+      <section id="about" className="py-16 sm:py-24 md:py-32 bg-white border-y-2 sm:border-y-4 border-black">
+        <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-20">
-              <div className="inline-block mb-8">
-                <div className="w-24 h-24 bg-[#FFD93D] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center mx-auto">
-                  <Lightbulb size={48} strokeWidth={3} />
+            <div className="text-center mb-12 sm:mb-16 md:mb-20">
+              <div className="inline-block mb-4 sm:mb-6 md:mb-8">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-[#FFD93D] border-2 sm:border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center mx-auto">
+                  <Lightbulb size={32} className="sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={3} />
                 </div>
               </div>
-              <h2 className="text-6xl md:text-8xl font-black mb-8 tracking-tighter">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-4 sm:mb-6 md:mb-8 tracking-tighter px-2">
                 THE NEW REALITY
               </h2>
-              <p className="text-2xl md:text-3xl font-bold leading-tight max-w-4xl mx-auto">
-                When code becomes trivial with AI, the quality of <span className="bg-[#00D9C0] px-2">ideation</span> and turning ideas into <span className="bg-[#FFD93D] px-2">products people want</span> become the only differentiators.
+              <p className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight max-w-4xl mx-auto px-2">
+                When code becomes trivial with AI, the quality of <span className="bg-[#00D9C0] px-1 sm:px-2">ideation</span> and turning ideas into <span className="bg-[#FFD93D] px-1 sm:px-2">products people want</span> become the only differentiators.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               {/* The Problem */}
-              <div className="bg-[#FF6B9D] border-4 border-black p-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 bg-black flex items-center justify-center">
-                    <X className="text-white" size={32} strokeWidth={4} />
+              <div className="bg-[#FF6B9D] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                <div className="flex items-center gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6 md:mb-8">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black flex items-center justify-center">
+                    <X className="text-white sm:w-7 sm:h-7 md:w-8 md:h-8" size={24} strokeWidth={4} />
                   </div>
-                  <h3 className="text-4xl font-black">THE PROBLEM</h3>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black">THE PROBLEM</h3>
                 </div>
-                <div className="space-y-6 text-xl font-bold leading-relaxed">
-                  <p>Traditional hackathons waste time on <span className="bg-white px-2">shallow brainstorming</span>, producing technically impressive demos that solve <span className="bg-white px-2">non-existent problems</span>.</p>
-                  <p>Experts with deep domain knowledge lack the <span className="bg-white px-2">product craft</span> to transform insights into solutions people actually use.</p>
+                <div className="space-y-3 sm:space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg lg:text-xl font-bold leading-relaxed">
+                  <p>Traditional hackathons waste time on <span className="bg-white px-1 sm:px-2">shallow brainstorming</span>, producing technically impressive demos that solve <span className="bg-white px-1 sm:px-2">non-existent problems</span>.</p>
+                  <p>Experts with deep domain knowledge lack the <span className="bg-white px-1 sm:px-2">product craft</span> to transform insights into solutions people actually use.</p>
                 </div>
               </div>
 
               {/* The Solution */}
-              <div className="bg-[#00D9C0] border-4 border-black p-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 bg-black flex items-center justify-center">
-                    <Target className="text-white" size={32} strokeWidth={3} />
+              <div className="bg-[#00D9C0] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                <div className="flex items-center gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6 md:mb-8">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black flex items-center justify-center">
+                    <Target className="text-white sm:w-7 sm:h-7 md:w-8 md:h-8" size={24} strokeWidth={3} />
                   </div>
-                  <h3 className="text-4xl font-black">THE SOLUTION</h3>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black">THE SOLUTION</h3>
                 </div>
-                <div className="space-y-6 text-xl font-bold leading-relaxed">
-                  <p><span className="bg-black text-white px-2 py-1">EXPERTS</span> (NGOs, researchers, professionals) define thoughtful challenges based on real-world expertise.</p>
-                  <p><span className="bg-black text-white px-2 py-1">PRODUCT BUILDERS</span> transform these visions into usable products in one weekend.</p>
-                  <div className="mt-8 pt-6 border-t-4 border-black">
-                    <p className="text-2xl font-black">
+                <div className="space-y-3 sm:space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg lg:text-xl font-bold leading-relaxed">
+                  <p><span className="bg-black text-white px-1 sm:px-2 py-0.5 sm:py-1">EXPERTS</span> (NGOs, researchers, professionals) define thoughtful challenges based on real-world expertise.</p>
+                  <p><span className="bg-black text-white px-1 sm:px-2 py-0.5 sm:py-1">PRODUCT BUILDERS</span> transform these visions into usable products in one weekend.</p>
+                  <div className="mt-4 sm:mt-6 md:mt-8 pt-3 sm:pt-4 md:pt-6 border-t-2 sm:border-t-4 border-black">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-black">
                       Domain Expertise + Product Craft = Solutions That Matter
                     </p>
                   </div>
@@ -328,21 +328,21 @@ export default function HackTheGapLanding() {
       </section>
 
       {/* Principles Section */}
-      <section id="principles" className="py-32">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-8">
-              <div className="w-24 h-24 bg-[#00D9C0] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center mx-auto">
-                <Star size={48} strokeWidth={3} className="fill-black" />
+      <section id="principles" className="py-16 sm:py-24 md:py-32">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <div className="inline-block mb-4 sm:mb-6 md:mb-8">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-[#00D9C0] border-2 sm:border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center mx-auto">
+                <Star size={32} strokeWidth={3} className="sm:w-10 sm:h-10 md:w-12 md:h-12 fill-black" />
               </div>
             </div>
-            <h2 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-3 sm:mb-4 md:mb-6 tracking-tighter px-2">
               THE 5 PRINCIPLES
             </h2>
-            <p className="text-2xl font-bold">Our manifesto for the AI era</p>
+            <p className="text-lg sm:text-xl md:text-2xl font-bold">Our manifesto for the AI era</p>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-6">
+          <div className="max-w-5xl mx-auto space-y-3 sm:space-y-4 md:space-y-6">
             {[
               {
                 number: '01',
@@ -377,18 +377,18 @@ export default function HackTheGapLanding() {
             ].map((principle, i) => (
               <div 
                 key={i}
-                className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
+                className="bg-white border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all"
               >
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
                   <div 
-                    className="w-20 h-20 flex-shrink-0 border-4 border-black flex items-center justify-center text-3xl font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                    className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex-shrink-0 border-2 sm:border-4 border-black flex items-center justify-center text-xl sm:text-2xl md:text-3xl font-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
                     style={{ backgroundColor: principle.color }}
                   >
                     {principle.number}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl md:text-3xl font-black mb-2 leading-tight">{principle.title}</h3>
-                    <p className="text-lg font-bold opacity-70">{principle.description}</p>
+                    <h3 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-black mb-1 sm:mb-2 leading-tight">{principle.title}</h3>
+                    <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold opacity-70">{principle.description}</p>
                   </div>
                 </div>
               </div>
@@ -398,134 +398,134 @@ export default function HackTheGapLanding() {
       </section>
 
       {/* Audiences Section */}
-      <section id="audiences" className="py-32 bg-white border-y-4 border-black">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-8">
-              <div className="w-24 h-24 bg-[#FF6B9D] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center mx-auto">
-                <Users size={48} strokeWidth={3} />
+      <section id="audiences" className="py-16 sm:py-24 md:py-32 bg-white border-y-2 sm:border-y-4 border-black">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <div className="inline-block mb-4 sm:mb-6 md:mb-8">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-[#FF6B9D] border-2 sm:border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center mx-auto">
+                <Users size={32} strokeWidth={3} className="sm:w-10 sm:h-10 md:w-12 md:h-12" />
               </div>
             </div>
-            <h2 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-3 sm:mb-4 md:mb-6 tracking-tighter px-2">
               WHO SHOULD JOIN
             </h2>
-            <p className="text-2xl font-bold">Four paths to create impact</p>
+            <p className="text-lg sm:text-xl md:text-2xl font-bold">Four paths to create impact</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
             {/* Product Builders */}
-            <div className="bg-[#00D9C0] border-4 border-black p-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all">
-              <div className="w-20 h-20 bg-black border-4 border-black flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
-                <Rocket size={40} strokeWidth={3} className="text-[#00D9C0]" />
+            <div className="bg-[#00D9C0] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-black border-2 sm:border-4 border-black flex items-center justify-center mb-3 sm:mb-4 md:mb-6 shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] md:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+                <Rocket size={28} strokeWidth={3} className="text-[#00D9C0] sm:w-8 sm:h-8 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-4xl font-black mb-4 uppercase">Product Builders</h3>
-              <p className="text-lg font-bold mb-6 leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 sm:mb-3 md:mb-4 uppercase">Product Builders</h3>
+              <p className="text-sm sm:text-base md:text-lg font-bold mb-4 sm:mb-5 md:mb-6 leading-relaxed">
                 Product-minded creators who use AI tools to build experiences people love. Obsessed with user needs, not tech stacks.
               </p>
-              <ul className="space-y-3 mb-8 font-bold">
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+              <ul className="space-y-2 sm:space-y-2.5 md:space-y-3 mb-4 sm:mb-6 md:mb-8 font-bold text-sm sm:text-base">
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Leverage AI tools (Claude, GPT, Cursor)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Focus on product craft over coding</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Build solutions people actually use</span>
                 </li>
               </ul>
-              <button onClick={() => openModal('builder')} className="w-full bg-black text-[#00D9C0] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
+              <button onClick={() => openModal('builder')} className="w-full bg-black text-[#00D9C0] border-2 sm:border-4 border-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 font-black text-sm sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hover:shadow-[2.5px_2.5px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[1.5px] hover:translate-y-[1.5px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] md:hover:translate-x-[3px] md:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
                 Apply as Builder
-                <ArrowRight strokeWidth={3} size={20} />
+                <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
               </button>
             </div>
 
             {/* Expert Partners */}
-            <div className="bg-[#FFD93D] border-4 border-black p-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all">
-              <div className="w-20 h-20 bg-black border-4 border-black flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
-                <Target size={40} strokeWidth={3} className="text-[#FFD93D]" />
+            <div className="bg-[#FFD93D] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-black border-2 sm:border-4 border-black flex items-center justify-center mb-3 sm:mb-4 md:mb-6 shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] md:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+                <Target size={28} strokeWidth={3} className="text-[#FFD93D] sm:w-8 sm:h-8 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-4xl font-black mb-4 uppercase">Expert Partners</h3>
-              <p className="text-lg font-bold mb-6 leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 sm:mb-3 md:mb-4 uppercase">Expert Partners</h3>
+              <p className="text-sm sm:text-base md:text-lg font-bold mb-4 sm:mb-5 md:mb-6 leading-relaxed">
                 NGOs, researchers, and professionals with field experience who define challenges worth solving.
               </p>
-              <ul className="space-y-3 mb-8 font-bold">
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+              <ul className="space-y-2 sm:space-y-2.5 md:space-y-3 mb-4 sm:mb-6 md:mb-8 font-bold text-sm sm:text-base">
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Share your domain expertise</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Get usable solutions in 48 hours</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>No development costs</span>
                 </li>
               </ul>
-              <button onClick={() => openModal('challenge')} className="w-full bg-black text-[#FFD93D] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
+              <button onClick={() => openModal('challenge')} className="w-full bg-black text-[#FFD93D] border-2 sm:border-4 border-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 font-black text-sm sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hover:shadow-[2.5px_2.5px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[1.5px] hover:translate-y-[1.5px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] md:hover:translate-x-[3px] md:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
                 Submit Challenge
-                <ArrowRight strokeWidth={3} size={20} />
+                <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
               </button>
             </div>
 
             {/* Sponsors */}
-            <div className="bg-[#FF6B9D] border-4 border-black p-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all">
-              <div className="w-20 h-20 bg-black border-4 border-black flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
-                <Award size={40} strokeWidth={3} className="text-[#FF6B9D]" />
+            <div className="bg-[#FF6B9D] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-black border-2 sm:border-4 border-black flex items-center justify-center mb-3 sm:mb-4 md:mb-6 shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] md:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+                <Award size={28} strokeWidth={3} className="text-[#FF6B9D] sm:w-8 sm:h-8 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-4xl font-black mb-4 uppercase">Sponsors</h3>
-              <p className="text-lg font-bold mb-6 leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 sm:mb-3 md:mb-4 uppercase">Sponsors</h3>
+              <p className="text-sm sm:text-base md:text-lg font-bold mb-4 sm:mb-5 md:mb-6 leading-relaxed">
                 Tech companies who want their tools used for positive impact and connect with product-minded talent.
               </p>
-              <ul className="space-y-3 mb-8 font-bold">
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+              <ul className="space-y-2 sm:space-y-2.5 md:space-y-3 mb-4 sm:mb-6 md:mb-8 font-bold text-sm sm:text-base">
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Showcase your product&apos;s impact</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Connect with next-gen builders</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Support real-world solutions</span>
                 </li>
               </ul>
-              <button onClick={() => openModal('sponsor')} className="w-full bg-black text-[#FF6B9D] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
+              <button onClick={() => openModal('sponsor')} className="w-full bg-black text-[#FF6B9D] border-2 sm:border-4 border-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 font-black text-sm sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hover:shadow-[2.5px_2.5px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[1.5px] hover:translate-y-[1.5px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] md:hover:translate-x-[3px] md:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
                 Become Sponsor
-                <ArrowRight strokeWidth={3} size={20} />
+                <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
               </button>
             </div>
 
             {/* Academic Institutions */}
-            <div className="bg-[#C996FF] border-4 border-black p-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all">
-              <div className="w-20 h-20 bg-black border-4 border-black flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
-                <GraduationCap size={40} strokeWidth={3} className="text-[#C996FF]" />
+            <div className="bg-[#C996FF] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-black border-2 sm:border-4 border-black flex items-center justify-center mb-3 sm:mb-4 md:mb-6 shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] md:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+                <GraduationCap size={28} strokeWidth={3} className="text-[#C996FF] sm:w-8 sm:h-8 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-4xl font-black mb-4 uppercase">Academic Institutions</h3>
-              <p className="text-lg font-bold mb-6 leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 sm:mb-3 md:mb-4 uppercase">Academic Institutions</h3>
+              <p className="text-sm sm:text-base md:text-lg font-bold mb-4 sm:mb-5 md:mb-6 leading-relaxed">
                 Universities teaching product craft, not just code. Connect students with real impact opportunities.
               </p>
-              <ul className="space-y-3 mb-8 font-bold">
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+              <ul className="space-y-2 sm:space-y-2.5 md:space-y-3 mb-4 sm:mb-6 md:mb-8 font-bold text-sm sm:text-base">
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Prove applied value of research</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Develop modern product skills</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-2xl">▸</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-lg sm:text-xl md:text-2xl">▸</span>
                   <span>Visibility on concrete innovation</span>
                 </li>
               </ul>
-              <button onClick={() => openModal('academic')} className="w-full bg-black text-[#C996FF] border-4 border-black px-6 py-4 font-black uppercase shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center justify-center gap-2">
+              <button onClick={() => openModal('academic')} className="w-full bg-black text-[#C996FF] border-2 sm:border-4 border-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 font-black text-sm sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hover:shadow-[2.5px_2.5px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[1.5px] hover:translate-y-[1.5px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] md:hover:translate-x-[3px] md:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
                 Partner With Us
-                <ArrowRight strokeWidth={3} size={20} />
+                <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>
@@ -533,42 +533,42 @@ export default function HackTheGapLanding() {
       </section>
 
       {/* Event Details */}
-      <section id="details" className="py-32">
-        <div className="container mx-auto px-6">
+      <section id="details" className="py-16 sm:py-24 md:py-32">
+        <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-20">
-              <div className="inline-block mb-8">
-                <div className="w-24 h-24 bg-[#6BCF7F] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center mx-auto">
-                  <Calendar size={48} strokeWidth={3} />
+            <div className="text-center mb-12 sm:mb-16 md:mb-20">
+              <div className="inline-block mb-4 sm:mb-6 md:mb-8">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-[#6BCF7F] border-2 sm:border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center mx-auto">
+                  <Calendar size={32} strokeWidth={3} className="sm:w-10 sm:h-10 md:w-12 md:h-12" />
                 </div>
               </div>
-              <h2 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-3 sm:mb-4 md:mb-6 tracking-tighter px-2">
                 EVENT DETAILS
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-[#00D9C0] border-4 border-black p-10 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <Calendar size={56} strokeWidth={3} className="mb-6" />
-                <h3 className="text-3xl font-black mb-3 uppercase">When</h3>
-                <p className="text-2xl font-black mb-2">October 23-24, 2025</p>
-                <p className="text-lg font-bold">One intense weekend</p>
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 md:mb-12">
+              <div className="bg-[#00D9C0] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <Calendar size={36} strokeWidth={3} className="mb-3 sm:mb-4 md:mb-6 sm:w-12 sm:h-12 md:w-14 md:h-14" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-black mb-2 sm:mb-3 uppercase">When</h3>
+                <p className="text-lg sm:text-xl md:text-2xl font-black mb-1 sm:mb-2">October 23-24, 2025</p>
+                <p className="text-sm sm:text-base md:text-lg font-bold">One intense weekend</p>
               </div>
 
-              <div className="bg-[#FFD93D] border-4 border-black p-10 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <MapPin size={56} strokeWidth={3} className="mb-6" />
-                <h3 className="text-3xl font-black mb-3 uppercase">Where</h3>
-                <p className="text-2xl font-black mb-2">42 Paris</p>
-                <p className="text-lg font-bold">The iconic coding school</p>
+              <div className="bg-[#FFD93D] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <MapPin size={36} strokeWidth={3} className="mb-3 sm:mb-4 md:mb-6 sm:w-12 sm:h-12 md:w-14 md:h-14" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-black mb-2 sm:mb-3 uppercase">Where</h3>
+                <p className="text-lg sm:text-xl md:text-2xl font-black mb-1 sm:mb-2">42 Paris</p>
+                <p className="text-sm sm:text-base md:text-lg font-bold">The iconic coding school</p>
               </div>
             </div>
 
-            <div className="bg-white border-4 border-black p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-              <h3 className="text-3xl font-black mb-10 uppercase flex items-center gap-3">
-                <Sparkles size={32} strokeWidth={3} />
+            <div className="bg-white border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-12 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-black mb-6 sm:mb-8 md:mb-10 uppercase flex items-center gap-2 sm:gap-3">
+                <Sparkles size={24} strokeWidth={3} className="sm:w-7 sm:h-7 md:w-8 md:h-8" />
                 The Weekend Flow
               </h3>
-              <div className="space-y-8">
+              <div className="space-y-4 sm:space-y-6 md:space-y-8">
                 {[
                   {
                     num: 1,
@@ -592,19 +592,19 @@ export default function HackTheGapLanding() {
                     color: '#FF6B9D'
                   }
                 ].map((step) => (
-                  <div key={step.num} className="flex gap-6 items-start">
+                  <div key={step.num} className="flex gap-3 sm:gap-4 md:gap-6 items-start">
                     <div 
-                      className="w-16 h-16 flex-shrink-0 border-4 border-black flex items-center justify-center text-2xl font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex-shrink-0 border-2 sm:border-4 border-black flex items-center justify-center text-lg sm:text-xl md:text-2xl font-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
                       style={{ backgroundColor: step.color }}
                     >
                       {step.num}
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-baseline gap-3 mb-2">
-                        <h4 className="font-black text-2xl uppercase">{step.title}</h4>
-                        <span className="text-sm font-black uppercase bg-black text-white px-2 py-1">{step.subtitle}</span>
+                      <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 md:gap-3 mb-1 sm:mb-2">
+                        <h4 className="font-black text-base sm:text-lg md:text-xl lg:text-2xl uppercase">{step.title}</h4>
+                        <span className="text-xs sm:text-sm font-black uppercase bg-black text-white px-1.5 py-0.5 sm:px-2 sm:py-1 inline-block w-fit">{step.subtitle}</span>
                       </div>
-                      <p className="text-lg font-bold leading-relaxed">{step.desc}</p>
+                      <p className="text-sm sm:text-base md:text-lg font-bold leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -615,9 +615,9 @@ export default function HackTheGapLanding() {
       </section>
 
       {/* Mantras */}
-      <section className="py-32 bg-black text-white border-y-4 border-black">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto space-y-16">
+      <section className="py-16 sm:py-24 md:py-32 bg-black text-white border-y-2 sm:border-y-4 border-black">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="max-w-5xl mx-auto space-y-8 sm:space-y-12 md:space-y-16">
             {[
               "When everyone can code, creating products people love becomes everything.",
               "Stop celebrating technical demos. Start shipping real products.",
@@ -626,7 +626,7 @@ export default function HackTheGapLanding() {
               "Build less, but build better."
             ].map((mantra, i) => (
               <div key={i} className="relative">
-                <div className="text-3xl md:text-5xl font-black text-center leading-tight">
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-center leading-tight px-2">
                   &quot;{mantra}&quot;
                 </div>
               </div>
@@ -636,28 +636,28 @@ export default function HackTheGapLanding() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-40">
-        <div className="container mx-auto px-6">
+      <section className="py-16 sm:py-24 md:py-32 lg:py-40">
+        <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-[#00D9C0] border-4 border-black p-16 shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] text-center">
-              <div className="mb-8">
-                <div className="w-24 h-24 bg-black border-4 border-black flex items-center justify-center mx-auto shadow-[6px_6px_0px_0px_rgba(255,255,255,1)]">
-                  <Sparkles size={48} strokeWidth={3} className="text-[#00D9C0]" />
+            <div className="bg-[#00D9C0] border-2 sm:border-4 border-black p-6 sm:p-10 md:p-12 lg:p-16 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] sm:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] lg:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] text-center">
+              <div className="mb-4 sm:mb-6 md:mb-8">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-black border-2 sm:border-4 border-black flex items-center justify-center mx-auto shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)]">
+                  <Sparkles size={32} strokeWidth={3} className="text-[#00D9C0] sm:w-10 sm:h-10 md:w-12 md:h-12" />
                 </div>
               </div>
-              <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight uppercase">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-black mb-4 sm:mb-6 md:mb-8 leading-tight uppercase">
                 Ready to Build<br />Solutions That<br />Actually Matter?
               </h2>
-              <p className="text-2xl font-bold mb-12 max-w-3xl mx-auto leading-tight">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-6 sm:mb-8 md:mb-12 max-w-3xl mx-auto leading-tight px-2">
                 Join us for a weekend where expertise meets execution, and real problems find thoughtful solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button onClick={() => openModal('builder')} className="bg-black text-[#00D9C0] border-4 border-black px-12 py-6 font-black text-xl uppercase shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center gap-3">
-                  <Rocket strokeWidth={3} size={24} />
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                <button onClick={() => openModal('builder')} className="bg-black text-[#00D9C0] border-2 sm:border-4 border-black px-6 sm:px-10 md:px-12 py-3 sm:py-5 md:py-6 font-black text-base sm:text-lg md:text-xl uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all flex items-center justify-center gap-2 sm:gap-3">
+                  <Rocket strokeWidth={3} size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   Apply Now
                 </button>
-                <button onClick={() => openModal('contact')} className="bg-white border-4 border-black px-12 py-6 font-black text-xl uppercase shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center gap-3">
-                  <Mail strokeWidth={3} size={24} />
+                <button onClick={() => openModal('contact')} className="bg-white border-2 sm:border-4 border-black px-6 sm:px-10 md:px-12 py-3 sm:py-5 md:py-6 font-black text-base sm:text-lg md:text-xl uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all flex items-center justify-center gap-2 sm:gap-3">
+                  <Mail strokeWidth={3} size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   Learn More
                 </button>
               </div>
@@ -667,18 +667,18 @@ export default function HackTheGapLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t-4 border-black py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-            <div className="flex items-center gap-3">
-              <div className="w-16 h-16 bg-[#00D9C0] border-4 border-black flex items-center justify-center font-black text-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+      <footer className="border-t-2 sm:border-t-4 border-black py-8 sm:py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 mb-8 sm:mb-12">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#00D9C0] border-2 sm:border-4 border-black flex items-center justify-center font-black text-2xl sm:text-3xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 H
               </div>
-              <span className="text-3xl font-black">
+              <span className="text-xl sm:text-2xl md:text-3xl font-black">
                 Hack the Gap
               </span>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4">
               {[
                 { icon: Twitter, label: 'Twitter' },
                 { icon: Linkedin, label: 'LinkedIn' },
@@ -688,17 +688,17 @@ export default function HackTheGapLanding() {
                 <a 
                   key={label}
                   href="#" 
-                  className="w-14 h-14 bg-white border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white border-2 sm:border-4 border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] transition-all"
                   aria-label={label}
                 >
-                  <Icon strokeWidth={3} size={24} />
+                  <Icon strokeWidth={3} size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
                 </a>
               ))}
             </div>
           </div>
-          <div className="text-center border-t-4 border-black pt-8">
-            <p className="font-black text-lg mb-2">© 2025 Hack the Gap</p>
-            <p className="font-bold">Building products that matter</p>
+          <div className="text-center border-t-2 sm:border-t-4 border-black pt-6 sm:pt-8">
+            <p className="font-black text-base sm:text-lg mb-1 sm:mb-2">© 2025 Hack the Gap</p>
+            <p className="font-bold text-sm sm:text-base">Building products that matter</p>
           </div>
         </div>
       </footer>
