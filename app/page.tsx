@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Users, Lightbulb, Target, Award, Calendar, MapPin, ArrowRight, Code, Heart, Rocket, Zap, Menu, X, Sparkles, Building2, Brain, Briefcase, GraduationCap, Github, Twitter, Linkedin, Mail, Star, TreePine, Laptop } from 'lucide-react';
+import { Users, Lightbulb, Target, Award, Calendar, MapPin, ArrowRight, Code, Heart, Rocket, Zap, Menu, X, Sparkles, Building2, Brain, Briefcase, GraduationCap, Github, Twitter, Linkedin, Mail, Star, TreePine, Laptop, ChevronDown } from 'lucide-react';
 
 export default function HackTheGapLanding() {
   const [scrolled, setScrolled] = useState(false);
@@ -176,6 +176,19 @@ export default function HackTheGapLanding() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="flex flex-col items-center gap-1 sm:gap-2 group cursor-pointer"
+            aria-label="Scroll to learn more"
+          >
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#FFD93D] border-3 sm:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center group-hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all">
+              <ChevronDown strokeWidth={3} className="w-5 h-5 sm:w-6 sm:h-6" />
+            </div>
+          </button>
         </div>
       </section>
 
