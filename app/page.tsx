@@ -78,7 +78,7 @@ export default function HackTheGapLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative pt-20 pb-12 min-h-screen flex items-center overflow-hidden bg-[#F0F0F0]">
+      <section id="home" className="relative pt-20 pb-20 min-h-screen flex items-center overflow-hidden bg-[#F0F0F0]">
         {/* Large Decorative Background Shapes */}
         <div className="absolute top-20 right-[5%] w-28 h-28 bg-[#FFD93D] border-4 border-black rotate-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
         <div className="absolute top-32 left-[8%] w-32 h-32 bg-[#FF6B9D] border-4 border-black -rotate-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hidden lg:block"></div>
@@ -119,7 +119,7 @@ export default function HackTheGapLanding() {
             </div>
             
             {/* Main Headline with COLORED TEXT */}
-            <div className="mb-3 sm:mb-8 relative overflow-hidden">
+            <div className="mb-3 sm:mb-6 relative overflow-hidden">
               <h1 className="text-[2rem] xs:text-[2.5rem] sm:text-[4rem] md:text-[6rem] lg:text-[7.5rem] font-black mb-2 sm:mb-4 leading-[0.9] tracking-tighter">
                 <span className="block">
                   <span className="bg-gradient-to-r from-[#00D9C0] via-[#FFD93D] to-[#FF6B9D] border-3 sm:border-4 border-black px-2 py-1.5 sm:px-6 sm:py-3 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-1 max-w-full break-words">
@@ -129,7 +129,7 @@ export default function HackTheGapLanding() {
               </h1>
             </div>
             
-            <div className="mb-4 sm:mb-8 relative">
+            <div className="mb-4 sm:mb-6 relative">
               {/* Decorative squares */}
               <div className="absolute -right-8 top-4 w-12 h-12 bg-[#C996FF] border-4 border-black rotate-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hidden lg:block -z-10"></div>
               <div className="absolute -left-16 bottom-4 w-8 h-8 bg-[#6BCF7F] border-4 border-black -rotate-12 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hidden lg:block -z-10"></div>
@@ -143,7 +143,7 @@ export default function HackTheGapLanding() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 mb-4 sm:mb-10">
+            <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 mb-4 sm:mb-6">
               <button className="group bg-[#00D9C0] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
                 <Rocket strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
                 <span className="whitespace-nowrap">Apply as Builder</span>
