@@ -712,6 +712,204 @@ export default function HackTheGapLanding() {
           </div>
         </div>
       </footer>
+
+      {/* Modal */}
+      {modalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-50" onClick={closeModal}>
+          <div 
+            className="bg-white border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="sticky top-0 bg-[#00D9C0] border-b-4 border-black p-6 flex justify-between items-center">
+              <h2 className="text-3xl font-black uppercase">
+                {modalOpen === 'builder' && 'Apply as Product Builder'}
+                {modalOpen === 'challenge' && 'Submit a Challenge'}
+                {modalOpen === 'sponsor' && 'Become a Sponsor'}
+                {modalOpen === 'academic' && 'Partner With Us'}
+                {modalOpen === 'contact' && 'Get in Touch'}
+              </h2>
+              <button 
+                onClick={closeModal}
+                className="w-12 h-12 bg-black text-white flex items-center justify-center hover:bg-[#333] transition-colors"
+              >
+                <X size={24} strokeWidth={3} />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <form onSubmit={handleSubmit} className="p-8">
+              <div className="space-y-6">
+                {/* Name Field - All forms */}
+                <div>
+                  <label htmlFor="name" className="block text-lg font-black mb-2 uppercase">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
+                    placeholder="Your full name"
+                  />
+                </div>
+
+                {/* Email Field - All forms */}
+                <div>
+                  <label htmlFor="email" className="block text-lg font-black mb-2 uppercase">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                {/* Organization Field - All except contact */}
+                {modalOpen !== 'contact' && (
+                  <div>
+                    <label htmlFor="organization" className="block text-lg font-black mb-2 uppercase">
+                      {modalOpen === 'builder' ? 'Current Company/School' : 'Organization'}
+                    </label>
+                    <input
+                      type="text"
+                      id="organization"
+                      name="organization"
+                      value={formData.organization}
+                      onChange={handleInputChange}
+                      className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
+                      placeholder={modalOpen === 'builder' ? 'Where you currently work or study' : 'Your organization name'}
+                    />
+                  </div>
+                )}
+
+                {/* Builder-specific fields */}
+                {modalOpen === 'builder' && (
+                  <>
+                    <div>
+                      <label htmlFor="experience" className="block text-lg font-black mb-2 uppercase">
+                        Product Building Experience
+                      </label>
+                      <textarea
+                        id="experience"
+                        name="experience"
+                        value={formData.experience}
+                        onChange={handleInputChange}
+                        rows={3}
+                        className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
+                        placeholder="Tell us about your product building experience..."
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="portfolio" className="block text-lg font-black mb-2 uppercase">
+                        Portfolio/Links
+                      </label>
+                      <input
+                        type="text"
+                        id="portfolio"
+                        name="portfolio"
+                        value={formData.portfolio}
+                        onChange={handleInputChange}
+                        className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
+                        placeholder="GitHub, LinkedIn, personal website, etc."
+                      />
+                    </div>
+                  </>
+                )}
+
+                {/* Challenge-specific fields */}
+                {modalOpen === 'challenge' && (
+                  <>
+                    <div>
+                      <label htmlFor="challengeTitle" className="block text-lg font-black mb-2 uppercase">
+                        Challenge Title *
+                      </label>
+                      <input
+                        type="text"
+                        id="challengeTitle"
+                        name="challengeTitle"
+                        required
+                        value={formData.challengeTitle}
+                        onChange={handleInputChange}
+                        className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
+                        placeholder="Brief title for your challenge"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="challengeDescription" className="block text-lg font-black mb-2 uppercase">
+                        Challenge Description *
+                      </label>
+                      <textarea
+                        id="challengeDescription"
+                        name="challengeDescription"
+                        required
+                        value={formData.challengeDescription}
+                        onChange={handleInputChange}
+                        rows={5}
+                        className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
+                        placeholder="Describe the problem, why it matters, and who it impacts..."
+                      />
+                    </div>
+                  </>
+                )}
+
+                {/* Message Field - All forms */}
+                <div>
+                  <label htmlFor="message" className="block text-lg font-black mb-2 uppercase">
+                    {modalOpen === 'builder' && 'Why do you want to join?'}
+                    {modalOpen === 'challenge' && 'Additional Information'}
+                    {modalOpen === 'sponsor' && 'Your Sponsorship Goals'}
+                    {modalOpen === 'academic' && 'Partnership Interests'}
+                    {modalOpen === 'contact' && 'Message *'}
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required={modalOpen === 'contact'}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
+                    placeholder={
+                      modalOpen === 'builder' ? 'Tell us why you want to participate...' :
+                      modalOpen === 'challenge' ? 'Any additional context...' :
+                      modalOpen === 'sponsor' ? 'What are you looking to achieve...' :
+                      modalOpen === 'academic' ? 'What type of partnership are you interested in...' :
+                      'Your message...'
+                    }
+                  />
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <div className="mt-8 flex gap-4">
+                <button
+                  type="submit"
+                  className="flex-1 bg-[#00D9C0] border-4 border-black px-8 py-4 font-black text-lg uppercase shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
+                >
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  onClick={closeModal}
+                  className="px-8 py-4 border-4 border-black font-black text-lg uppercase hover:bg-gray-100 transition-colors"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
