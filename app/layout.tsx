@@ -23,9 +23,13 @@ export const metadata: Metadata = {
   description: "Stop building tools looking for problems. Start building impactful products. Where expert challenges meet product craft. November 15-16, 2025 at 42 Paris.",
   keywords: ["hackathon", "product development", "AI tools", "42 Paris", "product builders", "innovation"],
   authors: [{ name: "Hack the Gap" }],
+  icons: {
+    icon: '/icon',
+    apple: '/apple-icon',
+  },
   openGraph: {
     title: "Hack the Gap | Product Hackathon",
-    description: "Where expert challenges meet product craft. November 15-16, 2025 at 42 Paris.",
+    description: "Start solving challenges that matter. November 15-16, 2025 at 42 Paris.",
     type: "website",
   },
 };
