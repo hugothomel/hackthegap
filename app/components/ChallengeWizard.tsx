@@ -196,6 +196,7 @@ export default function ChallengeWizard({ onClose }: ChallengeWizardProps) {
   const [formData, setFormData] = useState<ChallengeFormData>(initialFormData);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showMobileWarning, setShowMobileWarning] = useState(false);
 
   const steps = [
     { id: 0, title: 'Executive Overview', description: 'High-level problem statement' },
@@ -230,6 +231,20 @@ export default function ChallengeWizard({ onClose }: ChallengeWizardProps) {
     return () => clearInterval(interval);
   }, [formData]);
 
+  // Check for mobile device on mount
+  useEffect(() => {
+    const checkMobileAndShowWarning = () => {
+      const isMobile = window.innerWidth < 768;
+      const hasSeenWarning = localStorage.getItem('hackthegap_mobile_warning_dismissed');
+      
+      if (isMobile && !hasSeenWarning) {
+        setShowMobileWarning(true);
+      }
+    };
+
+    checkMobileAndShowWarning();
+  }, []);
+
   const saveDraft = () => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify({
@@ -245,6 +260,16 @@ export default function ChallengeWizard({ onClose }: ChallengeWizardProps) {
   const clearDraft = () => {
     localStorage.removeItem(STORAGE_KEY);
     setLastSaved(null);
+  };
+
+  const dismissMobileWarning = () => {
+    localStorage.setItem('hackthegap_mobile_warning_dismissed', 'true');
+    setShowMobileWarning(false);
+  };
+
+  const closeAndDismissWarning = () => {
+    localStorage.setItem('hackthegap_mobile_warning_dismissed', 'true');
+    onClose();
   };
 
   const updateFormData = (updates: Partial<ChallengeFormData>) => {
@@ -322,11 +347,56 @@ export default function ChallengeWizard({ onClose }: ChallengeWizardProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-50" onClick={onClose}>
-      <div 
-        className="bg-white border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] max-w-5xl w-full max-h-[90vh] flex flex-col"
-        onClick={(e) => e.stopPropagation()}
-      >
+    <>
+      {/* Mobile Warning Modal */}
+      {showMobileWarning && (
+        <div className="fixed inset-0 z-[110] flex items-center justify-center p-3 sm:p-4 bg-black bg-opacity-75">
+          <div 
+            className="bg-[#FFD93D] border-2 sm:border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] sm:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] max-w-md w-full p-4 sm:p-6 max-h-[95vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="text-center mb-4 sm:mb-6">
+              <div className="text-4xl sm:text-6xl mb-3 sm:mb-4">📱💻</div>
+              <h3 className="text-lg sm:text-2xl font-black uppercase mb-2 sm:mb-3">Mobile Device Detected</h3>
+              <p className="font-bold text-sm sm:text-lg mb-3 sm:mb-4">
+                This challenge submission form is quite comprehensive and works best on a computer with a larger screen.
+              </p>
+              <p className="font-bold text-xs sm:text-base mb-2">
+                It includes 8 detailed steps with multiple form fields, and you'll have a much better experience completing it on:
+              </p>
+              <ul className="text-left font-bold text-xs sm:text-base space-y-1 sm:space-y-2 mb-3 sm:mb-4 pl-4 sm:pl-6">
+                <li>✅ Desktop computer</li>
+                <li>✅ Laptop</li>
+                <li>✅ Tablet in landscape mode</li>
+              </ul>
+              <p className="font-bold text-xs sm:text-sm bg-white border-2 border-black p-2 sm:p-3 mb-3 sm:mb-4">
+                💡 <strong>Auto-save enabled</strong> - Your progress is saved on this device as you work.
+              </p>
+            </div>
+            <div className="space-y-2 sm:space-y-3">
+              <button
+                onClick={closeAndDismissWarning}
+                className="w-full bg-[#00D9C0] px-4 sm:px-6 py-3 sm:py-4 border-2 sm:border-4 border-black font-black uppercase text-sm sm:text-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] transition-all"
+              >
+                I'll Do This On Computer
+              </button>
+              <button
+                onClick={dismissMobileWarning}
+                className="w-full bg-white px-4 sm:px-6 py-2 sm:py-3 border-2 sm:border-4 border-black font-black uppercase text-sm sm:text-base hover:bg-gray-100 transition-colors"
+              >
+                Continue On Mobile Anyway
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Main Wizard */}
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-50" onClick={onClose}>
+        <div 
+          className="bg-white border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] max-w-5xl w-full max-h-[90vh] flex flex-col"
+          onClick={(e) => e.stopPropagation()}
+        >
         {/* Header */}
         <div className="sticky top-0 bg-[#FFD93D] border-b-4 border-black p-6 flex justify-between items-center">
           <div>
@@ -430,6 +500,7 @@ export default function ChallengeWizard({ onClose }: ChallengeWizardProps) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
