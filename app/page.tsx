@@ -551,7 +551,7 @@ export default function HackTheGapLanding() {
               <div className="bg-[#00D9C0] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                 <Calendar size={36} strokeWidth={3} className="mb-3 sm:mb-4 md:mb-6 sm:w-12 sm:h-12 md:w-14 md:h-14" />
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-black mb-2 sm:mb-3 uppercase">When</h3>
-                <p className="text-lg sm:text-xl md:text-2xl font-black mb-1 sm:mb-2">October 23-24, 2025</p>
+                <p className="text-lg sm:text-xl md:text-2xl font-black mb-1 sm:mb-2">November 15-16, 2025</p>
                 <p className="text-sm sm:text-base md:text-lg font-bold">One intense weekend</p>
               </div>
 
