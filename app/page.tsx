@@ -119,7 +119,7 @@ export default function HackTheGapLanding() {
             </div>
             
             {/* Main Headline with COLORED TEXT */}
-            <div className="mb-3 sm:mb-6 relative overflow-hidden">
+            <div className="mb-3 sm:mb-6 relative">
               <h1 className="text-[2rem] xs:text-[2.5rem] sm:text-[4rem] md:text-[6rem] lg:text-[7.5rem] font-black mb-2 sm:mb-4 leading-[0.9] tracking-tighter">
                 <span className="block">
                   <span className="bg-gradient-to-r from-[#00D9C0] via-[#FFD93D] to-[#FF6B9D] border-3 sm:border-4 border-black px-2 py-1.5 sm:px-6 sm:py-3 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-1 max-w-full break-words">
@@ -135,10 +135,10 @@ export default function HackTheGapLanding() {
               <div className="absolute -left-16 bottom-4 w-8 h-8 bg-[#6BCF7F] border-4 border-black -rotate-12 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hidden lg:block -z-10"></div>
               
               <p className="text-sm sm:text-xl md:text-2xl font-bold leading-tight mb-2 sm:mb-4 relative z-10">
-                Start building <span className="bg-[#00D9C0] border-3 sm:border-4 border-black px-1.5 py-0.5 sm:px-3 sm:py-1 inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">impactful products</span>
+                Stop building <span className="bg-[#FF6B9D] border-3 sm:border-4 border-black px-1.5 py-0.5 sm:px-3 sm:py-1 inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">problems looking for solutions</span>
               </p>
               <p className="text-xs sm:text-lg md:text-xl font-bold leading-tight relative z-10">
-                Where <span className="bg-[#FFD93D] border-3 sm:border-4 border-black px-1.5 py-0.5 sm:px-3 sm:py-1 inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1">expert challenges</span> meet <span className="bg-[#FF6B9D] border-3 sm:border-4 border-black px-1.5 py-0.5 sm:px-3 sm:py-1 inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">product craft</span>
+                And start solving <span className="bg-[#00D9C0] border-3 sm:border-4 border-black px-1.5 py-0.5 sm:px-3 sm:py-1 inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1">challenges that matter</span>
               </p>
             </div>
 
