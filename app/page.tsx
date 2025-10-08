@@ -18,9 +18,7 @@ export default function HackTheGapLanding() {
     organization: '',
     message: '',
     experience: '',
-    portfolio: '',
-    challengeTitle: '',
-    challengeDescription: ''
+    portfolio: ''
   });
 
   useEffect(() => {
@@ -44,9 +42,7 @@ export default function HackTheGapLanding() {
       organization: '',
       message: '',
       experience: '',
-      portfolio: '',
-      challengeTitle: '',
-      challengeDescription: ''
+      portfolio: ''
     });
   };
 
@@ -63,7 +59,6 @@ export default function HackTheGapLanding() {
     // Get the modal type for the email subject
     const subjectMap = {
       builder: 'Product Builder Application',
-      challenge: 'Challenge Submission',
       sponsor: 'Sponsorship Inquiry',
       academic: 'Academic Partnership',
       contact: 'General Inquiry'
@@ -84,14 +79,6 @@ export default function HackTheGapLanding() {
     
     if (formData.portfolio) {
       body += `Portfolio/Links: ${formData.portfolio}%0D%0A`;
-    }
-    
-    if (formData.challengeTitle) {
-      body += `Challenge Title: ${formData.challengeTitle}%0D%0A`;
-    }
-    
-    if (formData.challengeDescription) {
-      body += `Challenge Description: ${formData.challengeDescription}%0D%0A`;
     }
     
     if (formData.message) {
@@ -732,7 +719,6 @@ export default function HackTheGapLanding() {
             <div className="sticky top-0 bg-[#00D9C0] border-b-4 border-black p-6 flex justify-between items-center">
               <h2 className="text-3xl font-black uppercase">
                 {modalOpen === 'builder' && 'Apply as Product Builder'}
-                {modalOpen === 'challenge' && 'Submit a Challenge'}
                 {modalOpen === 'sponsor' && 'Become a Sponsor'}
                 {modalOpen === 'academic' && 'Partner With Us'}
                 {modalOpen === 'contact' && 'Get in Touch'}
@@ -834,47 +820,11 @@ export default function HackTheGapLanding() {
                   </>
                 )}
 
-                {/* Challenge-specific fields */}
-                {modalOpen === 'challenge' && (
-                  <>
-                    <div>
-                      <label htmlFor="challengeTitle" className="block text-lg font-black mb-2 uppercase">
-                        Challenge Title *
-                      </label>
-                      <input
-                        type="text"
-                        id="challengeTitle"
-                        name="challengeTitle"
-                        required
-                        value={formData.challengeTitle}
-                        onChange={handleInputChange}
-                        className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
-                        placeholder="Brief title for your challenge"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="challengeDescription" className="block text-lg font-black mb-2 uppercase">
-                        Challenge Description *
-                      </label>
-                      <textarea
-                        id="challengeDescription"
-                        name="challengeDescription"
-                        required
-                        value={formData.challengeDescription}
-                        onChange={handleInputChange}
-                        rows={5}
-                        className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
-                        placeholder="Describe the problem, why it matters, and who it impacts..."
-                      />
-                    </div>
-                  </>
-                )}
 
                 {/* Message Field - All forms */}
                 <div>
                   <label htmlFor="message" className="block text-lg font-black mb-2 uppercase">
                     {modalOpen === 'builder' && 'Why do you want to join?'}
-                    {modalOpen === 'challenge' && 'Additional Information'}
                     {modalOpen === 'sponsor' && 'Your Sponsorship Goals'}
                     {modalOpen === 'academic' && 'Partnership Interests'}
                     {modalOpen === 'contact' && 'Message *'}
@@ -889,7 +839,6 @@ export default function HackTheGapLanding() {
                     className="w-full border-4 border-black px-4 py-3 font-bold focus:outline-none focus:ring-4 focus:ring-[#00D9C0]"
                     placeholder={
                       modalOpen === 'builder' ? 'Tell us why you want to participate...' :
-                      modalOpen === 'challenge' ? 'Any additional context...' :
                       modalOpen === 'sponsor' ? 'What are you looking to achieve...' :
                       modalOpen === 'academic' ? 'What type of partnership are you interested in...' :
                       'Your message...'
