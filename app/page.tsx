@@ -171,7 +171,7 @@ export default function HackTheGapLanding() {
             <Laptop strokeWidth={3} size={28} />
           </div>
         </div>
-        <div className="absolute top-[45%] left-[5%] hidden xl:block">
+        <div className="absolute top-[40%] left-[1%] 2xl:left-[5%] hidden xl:block">
           <div className="w-16 h-16 bg-[#FF6B9D] border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center -rotate-12">
             <Brain strokeWidth={3} size={28} />
           </div>
