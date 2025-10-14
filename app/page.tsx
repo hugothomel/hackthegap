@@ -183,7 +183,7 @@ export default function HackTheGapLanding() {
         </div>
 
         <div className="container mx-auto px-3 sm:px-6 relative z-10 w-full">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto xl:pl-12 2xl:pl-0">
             {/* Date Badge */}
             <div className="mb-3 sm:mb-6">
               <div className="bg-[#FFD93D] border-3 sm:border-4 border-black px-2 sm:px-6 py-1.5 sm:py-2 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] inline-flex items-center gap-1.5 sm:gap-3 font-black text-[0.65rem] sm:text-sm flex-wrap">
