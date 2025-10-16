@@ -466,9 +466,9 @@ export default function HackTheGapLanding() {
                 </li>
               </ul>
               <button onClick={() => openModal('challenge')} className="w-full bg-black text-[#FFD93D] border-2 sm:border-4 border-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 font-black text-sm sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hover:shadow-[2.5px_2.5px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[1.5px] hover:translate-y-[1.5px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] md:hover:translate-x-[3px] md:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
-                Submit Challenge
-                <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
-              </button>
+               Submit Challenge
+               <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
+             </button>
             </div>
 
             {/* Sponsors */}
@@ -495,9 +495,9 @@ export default function HackTheGapLanding() {
                 </li>
               </ul>
               <button onClick={() => openModal('sponsor')} className="w-full bg-black text-[#FF6B9D] border-2 sm:border-4 border-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 font-black text-sm sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hover:shadow-[2.5px_2.5px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[1.5px] hover:translate-y-[1.5px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] md:hover:translate-x-[3px] md:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
-                Become Sponsor
-                <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
-              </button>
+               Become Sponsor
+               <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
+             </button>
             </div>
 
             {/* Academic Institutions */}
@@ -524,9 +524,9 @@ export default function HackTheGapLanding() {
                 </li>
               </ul>
               <button onClick={() => openModal('academic')} className="w-full bg-black text-[#C996FF] border-2 sm:border-4 border-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 font-black text-sm sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hover:shadow-[2.5px_2.5px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[1.5px] hover:translate-y-[1.5px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] md:hover:translate-x-[3px] md:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
-                Partner With Us
-                <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
-              </button>
+               Partner With Us
+               <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
+             </button>
             </div>
           </div>
         </div>
