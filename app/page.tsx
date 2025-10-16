@@ -125,9 +125,9 @@ export default function HackTheGapLanding() {
               <button onClick={() => scrollToSection('principles')} className="font-bold hover:text-[#00D9C0] transition-colors">Principles</button>
               <button onClick={() => scrollToSection('audiences')} className="font-bold hover:text-[#00D9C0] transition-colors">Join</button>
               <button onClick={() => scrollToSection('details')} className="font-bold hover:text-[#00D9C0] transition-colors">Details</button>
-              <button onClick={() => openModal('builder')} className="bg-[#00D9C0] border-4 border-black px-6 py-2 font-black uppercase text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
-                Apply Now
-              </button>
+              <a href="https://luma.com/jpkb61kb" target="_blank" rel="noopener noreferrer" className="bg-[#00D9C0] border-4 border-black px-6 py-2 font-black uppercase text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
+                Join Now
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -147,9 +147,9 @@ export default function HackTheGapLanding() {
                 <button onClick={() => scrollToSection('principles')} className="text-left font-bold text-lg">Principles</button>
                 <button onClick={() => scrollToSection('audiences')} className="text-left font-bold text-lg">Join</button>
                 <button onClick={() => scrollToSection('details')} className="text-left font-bold text-lg">Details</button>
-                <button onClick={() => openModal('builder')} className="bg-[#00D9C0] border-4 border-black px-6 py-3 font-black uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  Apply Now
-                </button>
+                <a href="https://luma.com/jpkb61kb" target="_blank" rel="noopener noreferrer" className="bg-[#00D9C0] border-4 border-black px-6 py-3 font-black uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-center">
+                  Join Now
+                </a>
               </div>
             </div>
           )}
@@ -223,11 +223,11 @@ export default function HackTheGapLanding() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 mb-4 sm:mb-6">
-              <button onClick={() => openModal('builder')} className="group bg-[#00D9C0] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
+              <a href="https://luma.com/jpkb61kb" target="_blank" rel="noopener noreferrer" className="group bg-[#00D9C0] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
                 <Rocket strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
-                <span className="whitespace-nowrap">Apply as Builder</span>
+                <span className="whitespace-nowrap">Join as Builder</span>
                 <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
               <button onClick={() => openModal('challenge')} className="bg-[#FFD93D] border-3 sm:border-4 border-black px-4 sm:px-8 py-2.5 sm:py-4 font-black text-xs sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
                 <Target strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
                 <span className="whitespace-nowrap">Propose Challenge</span>
@@ -436,10 +436,10 @@ export default function HackTheGapLanding() {
                   <span>Build solutions people actually use</span>
                 </li>
               </ul>
-              <button onClick={() => openModal('builder')} className="w-full bg-black text-[#00D9C0] border-2 sm:border-4 border-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 font-black text-sm sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hover:shadow-[2.5px_2.5px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[1.5px] hover:translate-y-[1.5px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] md:hover:translate-x-[3px] md:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
-                Apply as Builder
+              <a href="https://luma.com/jpkb61kb" target="_blank" rel="noopener noreferrer" className="w-full bg-black text-[#00D9C0] border-2 sm:border-4 border-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 font-black text-sm sm:text-base uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] md:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hover:shadow-[2.5px_2.5px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[1.5px] hover:translate-y-[1.5px] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] md:hover:translate-x-[3px] md:hover:translate-y-[3px] transition-all flex items-center justify-center gap-1.5 sm:gap-2">
+                Join as Builder
                 <ArrowRight strokeWidth={3} size={16} className="sm:w-5 sm:h-5" />
-              </button>
+              </a>
             </div>
 
             {/* Expert Partners */}
@@ -652,10 +652,10 @@ export default function HackTheGapLanding() {
                 Join us for a weekend where expertise meets execution, and real problems find thoughtful solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-                <button onClick={() => openModal('builder')} className="bg-black text-[#00D9C0] border-2 sm:border-4 border-black px-6 sm:px-10 md:px-12 py-3 sm:py-5 md:py-6 font-black text-base sm:text-lg md:text-xl uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all flex items-center justify-center gap-2 sm:gap-3">
+                <a href="https://luma.com/jpkb61kb" target="_blank" rel="noopener noreferrer" className="bg-black text-[#00D9C0] border-2 sm:border-4 border-black px-6 sm:px-10 md:px-12 py-3 sm:py-5 md:py-6 font-black text-base sm:text-lg md:text-xl uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all flex items-center justify-center gap-2 sm:gap-3">
                   <Rocket strokeWidth={3} size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                  Apply Now
-                </button>
+                  Join Now
+                </a>
                 <button onClick={() => openModal('contact')} className="bg-white border-2 sm:border-4 border-black px-6 sm:px-10 md:px-12 py-3 sm:py-5 md:py-6 font-black text-base sm:text-lg md:text-xl uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] sm:hover:translate-x-[3px] sm:hover:translate-y-[3px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] transition-all flex items-center justify-center gap-2 sm:gap-3">
                   <Mail strokeWidth={3} size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   Learn More
