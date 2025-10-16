@@ -188,8 +188,8 @@ export default function HackTheGapLanding() {
             <div className="mb-3 sm:mb-6">
               <div className="bg-[#FFD93D] border-3 sm:border-4 border-black px-2 sm:px-6 py-1.5 sm:py-2 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] inline-flex items-center gap-1.5 sm:gap-3 font-black text-[0.65rem] sm:text-sm flex-wrap">
                 <Calendar className="w-3.5 h-3.5 sm:w-5 sm:h-5" strokeWidth={3} />
-                <span className="hidden sm:inline">November 15-16, 2025</span>
-                <span className="sm:hidden">Nov 15-16</span>
+                <span className="hidden sm:inline">November 14-16, 2025</span>
+                <span className="sm:hidden">Nov 14-16</span>
                 <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-black"></span>
                 <MapPin className="w-3.5 h-3.5 sm:w-5 sm:h-5" strokeWidth={3} />
                 <span className="sm:hidden">42 Paris</span>
@@ -551,7 +551,7 @@ export default function HackTheGapLanding() {
               <div className="bg-[#00D9C0] border-2 sm:border-4 border-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                 <Calendar size={36} strokeWidth={3} className="mb-3 sm:mb-4 md:mb-6 sm:w-12 sm:h-12 md:w-14 md:h-14" />
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-black mb-2 sm:mb-3 uppercase">When</h3>
-                <p className="text-lg sm:text-xl md:text-2xl font-black mb-1 sm:mb-2">November 15-16, 2025</p>
+                <p className="text-lg sm:text-xl md:text-2xl font-black mb-1 sm:mb-2">November 14-16, 2025</p>
                 <p className="text-sm sm:text-base md:text-lg font-bold">One intense weekend</p>
               </div>
 
