@@ -747,7 +747,7 @@ export default function HackTheGapLanding() {
             {/* Modal Header */}
             <div className="sticky top-0 bg-[#00D9C0] border-b-4 border-black p-6 flex justify-between items-center">
               <h2 className="text-3xl font-black uppercase">
-                {modalOpen === 'builder' && 'Apply as Product Builder'}
+                {modalOpen === 'builder' && 'Join as Product Builder'}
                 {modalOpen === 'sponsor' && 'Become a Sponsor'}
                 {modalOpen === 'academic' && 'Partner With Us'}
                 {modalOpen === 'contact' && 'Get in Touch'}
