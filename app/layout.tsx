@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Hack the Gap | Product Hackathon",
     images: [
       {
-        url: "https://i.imgur.com/t4uS7mB.png",
+        url: "https://hackthegap.xyz/social-preview.png",
         width: 1200,
         height: 630,
         alt: "Hack the Gap | Product Hackathon",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description: "Start solving challenges that matter. November 14-16, 2025 at 42 Paris.",
     images: [
       {
-        url: "https://i.imgur.com/t4uS7mB.png",
+        url: "https://hackthegap.xyz/social-preview.png",
         width: 1200,
         height: 630,
         alt: "Hack the Gap | Product Hackathon",
