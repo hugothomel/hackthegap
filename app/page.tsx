@@ -106,7 +106,7 @@ export default function HackTheGapLanding() {
     <div className="bg-[#FAFAFA] text-black min-h-screen">
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all ${
-        scrolled ? 'bg-white border-b-4 border-black' : 'bg-transparent'
+        scrolled || mobileMenuOpen ? 'bg-white border-b-4 border-black' : 'bg-transparent'
       }`}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
